@@ -2,7 +2,7 @@
 This is a Command Injection payload generator made with Python 3
 
 Example:
-python3 cmd_injection_gen.py "cat /flag.txt"
+python3 cmd_injection_gen.py "cat /flag.txt >> /var/www/html/filefolder/somefile.txt"
 
 [!] Generating payloads for [cat /flag.txt >> /var/www/html/filefolder/somefile.txt]
 [+] Saving payloads payloads.
