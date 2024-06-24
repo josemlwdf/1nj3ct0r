@@ -105,7 +105,7 @@ def replace_keys(payload):
     return payload
 
 def add_postfix_comma(cmd):
-    return payload + ';'
+    return cmd + ';'
 
 
 def generate_payloads(cmd):
