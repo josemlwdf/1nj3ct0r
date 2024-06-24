@@ -104,6 +104,9 @@ def replace_keys(payload):
         payload = payload.replace(key, chars[key])
     return payload
 
+def add_postfix_comma(cmd):
+    return payload + ';'
+
 
 def generate_payloads(cmd):
     payloads =list()
@@ -149,6 +152,10 @@ def generate_payloads(cmd):
 
         cmd = original_cmd
         cmd = encoded(cmd)
+        append_payloads(cmd, payloads, operator)
+
+        cmd = original_cmd
+        cmd = add_postfix_comma(cmd)
         append_payloads(cmd, payloads, operator)
 
         for bypasser in bypassers:
